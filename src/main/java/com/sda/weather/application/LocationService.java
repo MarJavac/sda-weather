@@ -4,7 +4,7 @@ public class LocationService {
 
     private final LocationRepository locationRepository = new LocationRepository();
 
-    public Location addNewLocation(final String citiName, final String regionName, final String countryName, final double latitude, final double longitude){
+    public Location addNewLocation(final String citiName, final String regionName, final String countryName, final double latitude, final double longitude) {
         if (citiName == null || citiName.isEmpty()) {
             throw new RuntimeException("Pole z nazwą miasta nie może być puste! Wpisz poprawną wartość.");
         }
@@ -17,5 +17,9 @@ public class LocationService {
         if (longitude < -180 || longitude > 180) {
             throw new RuntimeException("Niepoprawna długość geograficzna! Poprawny przedział wartości to: od -180 do + 190 stopni");
         }
+
+        // todo: save to repository
+
+        return new Location(citiName, latitude, longitude, regionName, countryName); // todo: temp
     }
 }

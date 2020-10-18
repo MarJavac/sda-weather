@@ -6,9 +6,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class LocationController {
 
     private final ObjectMapper objectMapper = new ObjectMapper();
+    private final LocationService locationService = new LocationService();
 
     public String addLocation(String cityName, double latitude, double longitude, String regionName, String countryName) {
-        Location location = new Location("", "", "", "");
+        Location location = locationService.addNewLocation(cityName, regionName, countryName, latitude, longitude);
 
         try {
             return objectMapper.writeValueAsString(location);
