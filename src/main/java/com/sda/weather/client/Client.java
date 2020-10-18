@@ -6,6 +6,8 @@ import java.util.Scanner;
 
 public class Client {
 
+    private final LocationController locationController = new LocationController();
+
     public void runClientInterface() {
         System.out.println("Witaj! Twoja aplikacja została uruchomiona");
         Scanner scanner = new Scanner(System.in);
@@ -21,7 +23,27 @@ public class Client {
 
             switch (response) {
                 case 1:
+                    addLocation();
+                    break;
             }
         }
+    }
+
+    private void addLocation() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Podaj miasto: ");
+        String cityName = scanner.nextLine();
+        System.out.println("Podaj szerokość geograficzną ");
+        double latitude = scanner.nextDouble();
+        System.out.println("Podaj długość geograficzną ");
+        double longitude = scanner.nextDouble();
+        System.out.println("Podaj region ");
+        scanner.nextLine();
+        String regionName = scanner.nextLine();
+        System.out.println("Podaj nazwę kraju ");
+        String countryName = scanner.nextLine();
+
+        String response = locationController.addLocation(cityName, latitude, longitude, regionName, countryName);
+        System.out.println("Lokalizacja została dodana: " + response);
     }
 }

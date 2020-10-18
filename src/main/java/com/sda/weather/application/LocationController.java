@@ -1,20 +1,19 @@
 package com.sda.weather.application;
 
-import java.util.Scanner;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class LocationController {
-    private void addNewLocation() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Podaj miasto: ");
-        String cityName = scanner.nextLine();
-        System.out.println("Podaj szerokość geograficzną ");
-        double latitude = scanner.nextDouble();
-        System.out.println("Podaj długość geograficzną ");
-        double longitude = scanner.nextDouble();
-        System.out.println("Podaj region ");
-        scanner.reset();
-        String regionName = scanner.nextLine();
-        System.out.println("Podaj nazwę kraju ");
-        String countryName = scanner.nextLine();
+
+    private final ObjectMapper objectMapper = new ObjectMapper();
+
+    public String addLocation(String cityName, double latitude, double longitude, String regionName, String countryName) {
+        Location location = new Location("", "", "", "");
+
+        try {
+            return objectMapper.writeValueAsString(location);
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException("...");
+        }
     }
 }

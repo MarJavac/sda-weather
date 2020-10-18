@@ -1,7 +1,6 @@
 package com.sda.weather.application;
 
 public class LocationService {
-    private final LocationRepository locationRepository = new LocationRepository();
 
-    public LocationEntry
+    private final LocationRepository locationRepository = new LocationRepository();
 }
