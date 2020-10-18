@@ -19,6 +19,10 @@ public class LocationService {
         }
 
         // todo: save to repository
+        Location location = new Location(citiName, latitude, longitude, regionName, countryName);
+        Location savedLocation = locationRepository.saveNeLocation(location);
+
+        return savedLocation;
 
         return new Location(citiName, latitude, longitude, regionName, countryName); // todo: temp
     }

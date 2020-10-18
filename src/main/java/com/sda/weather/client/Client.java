@@ -26,11 +26,12 @@ public class Client {
                     addLocation();
                     break;
                 case 2:
-                    ;
+                    showAddedPlaces();
+                    break;
                 case 3:
-                    ;
+                    getWeatherParameters();
                 case 4:
-                    ;
+                    System.out.println("Twoja aplikacja zostanie zamknięta.");
 
             }
         }
