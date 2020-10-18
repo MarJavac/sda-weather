@@ -9,7 +9,7 @@ public class Client {
     private final LocationController locationController = new LocationController();
 
     public void runClientInterface() {
-        System.out.println("Witaj! Twoja aplikacja została uruchomiona");
+        System.out.println("Twoja aplikacja została uruchomiona");
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
@@ -25,6 +25,13 @@ public class Client {
                 case 1:
                     addLocation();
                     break;
+                case 2:
+                    ;
+                case 3:
+                    ;
+                case 4:
+                    ;
+
             }
         }
     }
@@ -33,9 +40,9 @@ public class Client {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Podaj miasto: ");
         String cityName = scanner.nextLine();
-        System.out.println("Podaj szerokość geograficzną ");
+        System.out.println("Podaj szerokość geograficzną -90 -> S, 90 -> N ");
         double latitude = scanner.nextDouble();
-        System.out.println("Podaj długość geograficzną ");
+        System.out.println("Podaj długość geograficzną -180 -> W, 180 -> E ");
         double longitude = scanner.nextDouble();
         System.out.println("Podaj region ");
         scanner.nextLine();

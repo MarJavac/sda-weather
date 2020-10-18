@@ -13,7 +13,7 @@ public class LocationController {
         try {
             return objectMapper.writeValueAsString(location);
         } catch (JsonProcessingException e) {
-            throw new RuntimeException("...");
+            throw new RuntimeException("Obiekt location nie może zostać zserializowany");
         }
     }
 }
