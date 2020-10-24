@@ -31,6 +31,12 @@ class LocationServiceTest {
     }
 
     @Test
+    void addNewLocation_whenCountryIsEmpty_shouldThrowException() {
+        // when
+        assertThrows(Exception.class, () -> locationService.addNewLocation("city", "region", " ", 0, 0));
+    }
+
+    @Test
     void addNewLocation_whenLongitudeIsBelow180Negative_shouldThrowException() {
         // when
         assertThrows(Exception.class, () -> locationService.addNewLocation("city", "region", "country", 0, -181));

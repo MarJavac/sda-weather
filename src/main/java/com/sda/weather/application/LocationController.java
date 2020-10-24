@@ -17,4 +17,6 @@ public class LocationController {
             throw new RuntimeException("Obiekt location nie może zostać zserializowany");
         }
     }
+
+    // todo add a new method for showAddedPlaces
 }

@@ -6,6 +6,12 @@ public class LocationService {
 
     public Location addNewLocation(final String citiName, final String regionName, final String countryName, final double latitude, final double longitude) {
         if (citiName == null || citiName.isEmpty()) {
+            /*
+                isEmpty("")     true
+                isEmpty(" ")    false
+                isBlank("")     true
+                isBlank(" ")    true
+            */
             throw new RuntimeException("Pole z nazwą miasta nie może być puste! Wpisz poprawną wartość.");
         }
         if (countryName == null || countryName.isEmpty()) {

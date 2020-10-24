@@ -38,6 +38,7 @@ public class Client {
     }
 
     private void getWeatherParameters() {
+        // todo use WeatherController
 
     }
 
