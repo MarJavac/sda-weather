@@ -18,12 +18,9 @@ public class LocationService {
             throw new RuntimeException("Niepoprawna długość geograficzna! Poprawny przedział wartości to: od -180 do + 190 stopni");
         }
 
-        // todo: save to repository
         Location location = new Location(citiName, latitude, longitude, regionName, countryName);
-        Location savedLocation = locationRepository.saveNeLocation(location);
+        Location savedLocation = locationRepository.saveNewLocation(location);
 
         return savedLocation;
-
-        return new Location(citiName, latitude, longitude, regionName, countryName); // todo: temp
     }
 }

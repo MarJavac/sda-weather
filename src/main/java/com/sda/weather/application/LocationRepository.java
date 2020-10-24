@@ -12,13 +12,13 @@ public class LocationRepository {
 
     public LocationRepository() {
         // todo: create the SessionFactory
-        SessionFactory sessionFactory = new MetadataSource(serviceRegistry)
-                .buildMetadata()
-                .buildSessionFactory();
-        sessionFactory = null;
+//        SessionFactory sessionFactory = new MetadataSource(serviceRegistry)
+//                .buildMetadata()
+//                .buildSessionFactory();
+//        sessionFactory = null;
     }
 
-    public Location saveNeLocation(Location location) {
+    public Location saveNewLocation(Location location) {
         return location;
     }
 

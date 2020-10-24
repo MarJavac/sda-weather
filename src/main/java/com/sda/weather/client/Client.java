@@ -37,6 +37,14 @@ public class Client {
         }
     }
 
+    private void getWeatherParameters() {
+
+    }
+
+    private void showAddedPlaces() {
+        // todo use LocationController
+    }
+
     private void addLocation() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Podaj miasto: ");

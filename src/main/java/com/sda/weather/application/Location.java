@@ -1,6 +1,7 @@
 package com.sda.weather.application;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,6 +10,7 @@ import javax.persistence.Id;
 
 @Entity
 @Data
+@NoArgsConstructor
 public class Location {
 
     @Id
@@ -19,7 +21,7 @@ public class Location {
     private String region;
     private String country;
 
-    public Location(String name, Double latitude, Double longitude, String region, String country) {
+    public Location(String name, double latitude, double longitude, String region, String country) {
         this.name = name;
         this.latitude = latitude;
         this.longitude = longitude;
